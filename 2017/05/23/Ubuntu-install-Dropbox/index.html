@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Tech_About," />
 
 
 
@@ -87,15 +87,17 @@
 
 
 
-<meta name="description" content="It&apos;s Laungr here">
-<meta property="og:type" content="website">
-<meta property="og:title" content="籬落">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="在墙内无法访问Dropbox，而Dropbox也没有提供Ubuntu的离线安装包，而是在线安装然后下载软件包，Ubuntu上Shadowsocks-Qt5并不能实现全局代理，所以无法安装。可以采用Proxychains实现全局代理。 安装Proxychains12sudo apt-get install proxychains4#如果不能安装，可以自行上网搜索结果。 配置Socks5代理12345">
+<meta name="keywords" content="Tech_About">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu Install Dropbox">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/Ubuntu-install-Dropbox/index.html">
 <meta property="og:site_name" content="籬落">
-<meta property="og:description" content="It&apos;s Laungr here">
+<meta property="og:description" content="在墙内无法访问Dropbox，而Dropbox也没有提供Ubuntu的离线安装包，而是在线安装然后下载软件包，Ubuntu上Shadowsocks-Qt5并不能实现全局代理，所以无法安装。可以采用Proxychains实现全局代理。 安装Proxychains12sudo apt-get install proxychains4#如果不能安装，可以自行上网搜索结果。 配置Socks5代理12345">
+<meta property="og:updated_time" content="2017-05-23T14:26:49.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="籬落">
-<meta name="twitter:description" content="It&apos;s Laungr here">
+<meta name="twitter:title" content="Ubuntu Install Dropbox">
+<meta name="twitter:description" content="在墙内无法访问Dropbox，而Dropbox也没有提供Ubuntu的离线安装包，而是在线安装然后下载软件包，Ubuntu上Shadowsocks-Qt5并不能实现全局代理，所以无法安装。可以采用Proxychains实现全局代理。 安装Proxychains12sudo apt-get install proxychains4#如果不能安装，可以自行上网搜索结果。 配置Socks5代理12345">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/23/Ubuntu-install-Dropbox/"/>
 
 
 
 
 
-  <title> 籬落 </title>
+  <title> Ubuntu Install Dropbox | 籬落 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,10 +271,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/05/23/Ubuntu-install-Dropbox/" itemprop="url">
-                  Ubuntu Install Dropbox
-                </a>
+                Ubuntu Install Dropbox
               
             
           </h1>
@@ -325,9 +322,7 @@
       
 
       
-        
-          
-            <p>在墙内无法访问Dropbox，而Dropbox也没有提供Ubuntu的离线安装包，而是在线安装然后下载软件包，Ubuntu上Shadowsocks-Qt5并不能实现全局代理，所以无法安装。可以采用Proxychains实现全局代理。</p>
+        <p>在墙内无法访问Dropbox，而Dropbox也没有提供Ubuntu的离线安装包，而是在线安装然后下载软件包，Ubuntu上Shadowsocks-Qt5并不能实现全局代理，所以无法安装。可以采用Proxychains实现全局代理。</p>
 <h2 id="安装Proxychains"><a href="#安装Proxychains" class="headerlink" title="安装Proxychains"></a>安装Proxychains</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install proxychains4</div><div class="line">#如果不能安装，可以自行上网搜索结果。</div></pre></td></tr></table></figure>
 <h2 id="配置Socks5代理"><a href="#配置Socks5代理" class="headerlink" title="配置Socks5代理"></a>配置Socks5代理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vim /etc/proxychains.conf</div><div class="line">#修改该文件为：</div><div class="line">	`socks4 127.0.0.1 9050 --&gt;socks5 127.0.0.1 1080` </div><div class="line">vim /usr/local/etc/proxychains.conf(New file)</div><div class="line">#修改该文为：</div><div class="line">	`proxychains4 telnet google.com 80`</div></pre></td></tr></table></figure>
 <p>然后</p>
@@ -336,42 +331,56 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">proxychainswget -O - &quot;https://www.dropbox.com/download?plat=lnx.x86_64&quot; | tar xzf -</div><div class="line">~/.dropbox-dist/dropboxd</div></pre></td></tr></table></figure>
 <p><strong>ALL IS DONE！</strong> </p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Tech-About/" rel="tag"># Tech_About</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -379,6 +388,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -398,8 +411,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -452,6 +474,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Proxychains"><span class="nav-number">1.</span> <span class="nav-text">安装Proxychains</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Socks5代理"><span class="nav-number">2.</span> <span class="nav-text">配置Socks5代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Dropbox"><span class="nav-number">3.</span> <span class="nav-text">安装Dropbox</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -559,6 +597,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
