@@ -260,6 +260,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/23/Ubuntu-install-Dropbox/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron Laungr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="籬落">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/23/Ubuntu-install-Dropbox/" itemprop="url">
+                  Ubuntu Install Dropbox
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T22:10:37+08:00">
+                2017-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/23/Ubuntu-install-Dropbox/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/23/Ubuntu-install-Dropbox/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在墙内无法访问Dropbox，而Dropbox也没有提供Ubuntu的离线安装包，而是在线安装然后下载软件包，Ubuntu上Shadowsocks-Qt5并不能实现全局代理，所以无法安装。可以采用Proxychains实现全局代理。</p>
+<h2 id="安装Proxychains"><a href="#安装Proxychains" class="headerlink" title="安装Proxychains"></a>安装Proxychains</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install proxychains4</div><div class="line">#如果不能安装，可以自行上网搜索结果。</div></pre></td></tr></table></figure>
+<h2 id="配置Socks5代理"><a href="#配置Socks5代理" class="headerlink" title="配置Socks5代理"></a>配置Socks5代理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vim /etc/proxychains.conf</div><div class="line">#修改该文件为：</div><div class="line">	`socks4 127.0.0.1 9050 --&gt;socks5 127.0.0.1 1080` </div><div class="line">vim /usr/local/etc/proxychains.conf(New file)</div><div class="line">#修改该文为：</div><div class="line">	`proxychains4 telnet google.com 80`</div></pre></td></tr></table></figure>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">proxychains4 ping dropbox.com</div><div class="line">#ping通即可</div></pre></td></tr></table></figure>
+<h2 id="安装Dropbox"><a href="#安装Dropbox" class="headerlink" title="安装Dropbox"></a>安装Dropbox</h2><p>参照Dropbox官网<code>通过命令行安装无外设模式的 Dropbox</code> 模式安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">proxychainswget -O - &quot;https://www.dropbox.com/download?plat=lnx.x86_64&quot; | tar xzf -</div><div class="line">~/.dropbox-dist/dropboxd</div></pre></td></tr></table></figure>
+<p><strong>ALL IS DONE！</strong> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/14/What-A-Passer-by-Told-Me/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -734,7 +873,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -747,7 +886,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
