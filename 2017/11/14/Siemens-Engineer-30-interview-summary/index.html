@@ -1,0 +1,804 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Memory,Application," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="籬落" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="前言上周去西安面试了西门子的工程培训生项目，10.30飞西安好在机票酒店都可以报销。 面试当天10.31，宾馆离公司很近，所以时间也很充分，提前了半小时8:30到的公司，也只有两个人到了。当了之后先是给一个胸牌以确定身份，到九点钟的时候大概有24个人总共，HR就招待我们进去，直接领进会议室里面。九点半会议正式开始，先是HR做了开场，也就是欢迎大家到来的一些客套话以及讲了讲西门子的历史，然后就是请S">
+<meta name="keywords" content="Memory,Application">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Siemens Engineer 30 Interview Summary">
+<meta property="og:url" content="http://yoursite.com/2017/11/14/Siemens-Engineer-30-interview-summary/index.html">
+<meta property="og:site_name" content="籬落">
+<meta property="og:description" content="前言上周去西安面试了西门子的工程培训生项目，10.30飞西安好在机票酒店都可以报销。 面试当天10.31，宾馆离公司很近，所以时间也很充分，提前了半小时8:30到的公司，也只有两个人到了。当了之后先是给一个胸牌以确定身份，到九点钟的时候大概有24个人总共，HR就招待我们进去，直接领进会议室里面。九点半会议正式开始，先是HR做了开场，也就是欢迎大家到来的一些客套话以及讲了讲西门子的历史，然后就是请S">
+<meta property="og:updated_time" content="2017-11-14T10:57:22.054Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Siemens Engineer 30 Interview Summary">
+<meta name="twitter:description" content="前言上周去西安面试了西门子的工程培训生项目，10.30飞西安好在机票酒店都可以报销。 面试当天10.31，宾馆离公司很近，所以时间也很充分，提前了半小时8:30到的公司，也只有两个人到了。当了之后先是给一个胸牌以确定身份，到九点钟的时候大概有24个人总共，HR就招待我们进去，直接领进会议室里面。九点半会议正式开始，先是HR做了开场，也就是欢迎大家到来的一些客套话以及讲了讲西门子的历史，然后就是请S">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/14/Siemens-Engineer-30-interview-summary/"/>
+
+
+
+
+
+  <title> Siemens Engineer 30 Interview Summary | 籬落 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">籬落</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">LiLo</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/14/Siemens-Engineer-30-interview-summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron Laungr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="籬落">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Siemens Engineer 30 Interview Summary
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-14T18:43:05+08:00">
+                2017-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/14/Siemens-Engineer-30-interview-summary/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/14/Siemens-Engineer-30-interview-summary/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上周去西安面试了西门子的工程培训生项目，10.30飞西安好在机票酒店都可以报销。</p>
+<p>面试当天10.31，宾馆离公司很近，所以时间也很充分，提前了半小时8:30到的公司，也只有两个人到了。当了之后先是给一个胸牌以确定身份，到九点钟的时候大概有24个人总共，HR就招待我们进去，直接领进会议室里面。九点半会议正式开始，先是HR做了开场，也就是欢迎大家到来的一些客套话以及讲了讲西门子的历史，然后就是请SFAE王总讲话，正式启动面试。</p>
+<p>##无领导小组讨论</p>
+<p>面试总共有三个部分，无领导小组讨论、笔试、专业单面。无领导小组讨论的形式是分成5个小组，小组讨论30min，最后做5min的总结，所有应聘者面对同一个问题。9:55开始，面试的题目如下：</p>
+<blockquote>
+<p>原来有一批产品文档需要提交给客户，但客户临时改了需求导致延期提交。客户指定的截止时间是这个周五晚上提交，而你所在的部门现在只有两个员工正常上班，有另外三个员工由于忙于其他项目不在公司，而按照正常进度需要五个人才能完成。</p>
+<ol>
+<li>请问面对这样的问题，你有什么解决方法？</li>
+<li>你的方法中的关键因素是什么？</li>
+</ol>
+</blockquote>
+<p>就是这样一个问题，拿到题目是9:55，可以在5min内问主考官问题，10:00正式讨论，10:30开始汇报。我们组是5个人，刚开始也有人问了问题，诸如<em>可不可以找其他部分的人来帮忙？</em>，<em>短期内培训人员有可能吗？</em>，<em>可不可以让客户延期提交时间？</em>等等，为了给面试官留个印象，我也问了<em>请问是专业性极强的工作内容吗？有没有部分工作比如说让文职人员代劳的？</em>Pre的方式是：发了5张A1纸，可以把方案记录下来。</p>
+<p>转眼间就开始正式讨论了，由于汇报纸的方向是靠近桌子一边的，那边那位同学就乘势直接拿起了纸笔做起了领导，他的特点是头很油，就叫他油头吧。油头先发制人想做team leader，我发现其他几个人都没有戴手表，就做了time keeper，先说了<em>那我们先来2min梳理自己的想法，然后5min大家每人1min做个汇报，花15min讨论成果，5min让reporter演练一下，剩下一点时间就充当裕量吧</em>。这些话自然都是在面经上面看到的，就直接用了起来。实际上大家也基本上是按这个步骤进行的，大家想到的解决方法也差不多：</p>
+<blockquote>
+<ol>
+<li>两位必然加班；如果只有两个人，现在的工作量是原来的2.5倍。</li>
+<li>让3个出差的工程师远程协助，用石墨文档或者钉钉之类的写作软件；</li>
+<li>请其他部门人帮忙做一些不太核心的工作；</li>
+<li>请客户适当延后ddl（备用）。</li>
+</ol>
+</blockquote>
+<p>其他四个人的想法其实也差不多，但是油头提出了<strong>预算</strong>相关方面，其他几个人都没有想到。整个讨论过程，油头都想带领这个团队，但不得不说，他对于团队的引领不是很好，我觉得<em>他并没有把关键因素highlight出来，相反他认为每个方案中的小项就是具体方案可以作为重点</em>，就这一点我很不能赞同，向他提出了三次标记关键词，但他并没有去做。在整个讨论之中，我做time keeper自认为是很合格的，每个5min汇报点提醒进度，有的地方停滞不前就会站出来说<em>我们的时间不多了，不如先放一放进行下一项。</em>我发现捎带提了我之前提出的2.5倍工作量问题，那我就直接说了工作量的评估应该是解决整个问题的关键，分配任务以及人员调配都应该以及工作量的多少，这一点重申在旁边一直看的面试官应该注意到了。</p>
+<p>不知道油头是什么背景，他的思维和我们另外几个不太一样，甚至在有的问题上出现了分歧，但在这个时候大家只能求同存异。他的话也很多，有用无用对半开吧，但记录工作都是他做的。有的时候我不得不把他拽回来，我还甚至提出了举手表决的方法确定两个方案的优先级，但是效果并不好，主要是大家并不愿意举手。</p>
+<p>最终我们得到如下的结果：</p>
+<blockquote>
+<ul>
+<li>确定工作量，2.5倍工作量是整个人员调度和时间分配的根本；</li>
+<li>方案介绍，总共五个方案，前三个从自身出发，主要是加班问题；后两个从客户出发，延长ddl；<ol>
+<li>加班</li>
+<li>出差人员在下班时间帮忙</li>
+<li>其他部门人员做一些非核心工作</li>
+<li>问客户会不会有其他需求，以合理延长时间</li>
+<li>压缩工作量</li>
+</ol>
+</li>
+<li>适用场景总结</li>
+</ul>
+</blockquote>
+<p>方案得出距临报告还有5min，有人问了一句谁来汇报呢？大概过了0.5秒没有人回答，我就主动站起来说那我来吧我想大家都还是很想汇报的应该都是谦虚了一下就被我给抢到了。我大概演练了一下，花了三分钟厘清了一下思路。然后HR宣布Pre正式开始。我们组有人提议做第一个汇报的。很巧，没有人和我们抢。那自然我是第一个汇报的人了。</p>
+<p>上去布置好展示用的纸就开始了，自己也没有紧张，就是之前讨论的方案，主要是想法思路以及整个方案的结构我觉得都讲的很清楚，自己也比较享受。但是！忽然小组成员在下面给我提醒时间，我才意识到Pre时间是5min，然而此时已经过了50%的时间，而只讲了30%的内容。不得不加快语速，紧张之下后面有一部分也乱了一点。最后时间应该是超了1min左右，但是没有人care，也没有人叫停。</p>
+<p>接下来到考官问问题的时候了，比方说<em>要是其他部门也在忙呢？</em>，<em>加班问题上有没有考虑过项目的预算？</em>，<em>那边有所工作量是什么意思？</em>等等这样的问题，所有的问题都是我最先回答的，我的一句主要都是写在纸上面的，回答的内容也蛮少的。后来都有小组成员起来补充，补充的都还挺不错的。尤其是<strong>预算问题上</strong>，油头还站到讲台上面补充了，讲的很在理。就感觉自己的回答糟糟的。</p>
+<p>下去之后才知道，时间提醒是面试官让组员示意的，所有组员也并没有意识到时间问题。真的是摔。总体感觉自己除了时间把握上还是正常发挥了。</p>
+<p>第二组的Pre是正常最好的，并且做了一个思维导图这是我们所没有意识到的。演讲的思路也很清晰，每个想法下面也都有对应的方案，看到第二组之后就感觉自己GG了。不过好在接下来的三组不知道为何出乎意料的差，所有的想法都和我们差不多，就没有什么出彩的地方，自然没有人关注的到，这大概算是第一个发言的优势吧。所有Pre看完之后，心态稍稳了一点。如果不是时间问题，我应该还是很不错的。群面结束是11:45。</p>
+<h2 id="笔试-单面"><a href="#笔试-单面" class="headerlink" title="笔试+单面"></a>笔试+单面</h2><p>群面之后是午餐时间，公司提供了汉堡和牛奶，然后下午一点开始笔试和专业面试。午休时间和同来的人聊了聊，发现基本上都是说是，西安本地上大学的居多，从上海来的包括我只有3个人，另外两个都是硕士，但他们名校Buff都不及我。总归我交的学生还是应该自信！</p>
+<p>一点钟开始笔试，分强电弱电和软件类两种题目，因为我本身不是电气工程科班，就拿了软件类的题目，并且之前有做过其他公司的笔试。拿到题目之后，发现竟然简单的离谱，任何一个CS科班的都能拿满分，可惜我不能因为我不是。专业面试与笔试同时进行，我是第一个被叫去面试的。</p>
+<p>三个面试官面一个candidate，面我的主考官超级nice。问题其实都是之前准备过的问题，其中有一个用英文回答<em>你的强项和缺点个是什么？</em>我用英文回答了大概有三分钟，最后有个例子不知怎么讲好一些，就完成回答之后用中文补充了，面试官也没有异议。还问了很多有关做过的项目，都是做过的东西讲起来还是很容易的。他们的问题问完之后，我追加了两个问题，表达了自己的热忱和决心，总共面试大概有35min。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>整个面试来说，除了汇报时间把控上，其他各个地方都算是正常发挥了，至于能不能拿到offer主要看通过率了，要的人少大概就被刷了，还是蛮可惜的。不过我觉得群面的通过率我们组肯定是最高的。</p>
+<p>总体来说，西家对于人才的培养真的是很不错的，其实从这次面试就看得出来他们的态度。有的公司大概就是<em>浪费一下午，面试十分钟</em>，有面过一个也算是业内大佬了，自我介绍时面试官在看简历，问问题的时候也不问做过的项目随便了一点，只好最后问了两个明知故问的问题拖了几分钟时间，缓解尴尬。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Memory/" rel="tag"># Memory</a>
+          
+            <a href="/tags/Application/" rel="tag"># Application</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/14/433-memory/" rel="next" title="433 memory">
+                <i class="fa fa-chevron-left"></i> 433 memory
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Aaron Laungr" />
+          <p class="site-author-name" itemprop="name">Aaron Laungr</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's Laungr here</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Aaron_Lungr" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/aaron.laungr/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="MailTo:Aaron.Laungr@Gamil.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  E-Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#笔试-单面"><span class="nav-text">笔试+单面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aaron Laungr</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://http-laungr-gq.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/11/14/Siemens-Engineer-30-interview-summary/';
+          this.page.identifier = '2017/11/14/Siemens-Engineer-30-interview-summary/';
+          this.page.title = 'Siemens Engineer 30 Interview Summary';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://http-laungr-gq.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
