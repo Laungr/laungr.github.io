@@ -1,237 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>大三已去 | 籬落</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="窗外大雨。 大三已去。 这个学期没写代码。 再过几天去外地实习。 该还的早晚要还。  考试周和大作业导致晚一天。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="大三已去">
-<meta property="og:url" content="https://laungr.github.io/2017/06/23/Junior-Year-Has-Gone/index.html">
-<meta property="og:site_name" content="籬落">
-<meta property="og:description" content="窗外大雨。 大三已去。 这个学期没写代码。 再过几天去外地实习。 该还的早晚要还。  考试周和大作业导致晚一天。">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2017-06-23T13:54:40.000Z">
-<meta property="article:modified_time" content="2017-06-23T13:56:53.199Z">
-<meta property="article:author" content="Aaron Laungr">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="籬落" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">籬落</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://laungr.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Junior-Year-Has-Gone" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/23/Junior-Year-Has-Gone/" class="article-date">
-  <time datetime="2017-06-23T13:54:40.000Z" itemprop="datePublished">2017-06-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      大三已去
-    </h1>
-  
+{% block page_class %}page-post-detail{% endblock %}
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>窗外大雨。</p>
-<p>大三已去。</p>
-<p>这个学期没写代码。</p>
-<p>再过几天去外地实习。</p>
-<p>该还的早晚要还。</p>
-<hr>
-<p>考试周和大作业导致晚一天。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://laungr.github.io/2017/06/23/Junior-Year-Has-Gone/" data-id="ckqf7d3ib000daww85e8v080h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/06/29/How-to-Do-What-You-Love/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          How to Do What You Love
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/06/15/Tokyo-Story-Review/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">『东京物语』Review</div>
-    </a>
-  
-</nav>
+{% block content %}
 
-  
-</article>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Application/" rel="tag">Application</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-Reviews/" rel="tag">Book_Reviews</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Film-Reviews/" rel="tag">Film_Reviews</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ingress/" rel="tag">Ingress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Internship/" rel="tag">Internship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/" rel="tag">Memory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nothing/" rel="tag">Nothing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PaulGraham/" rel="tag">PaulGraham</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech-About/" rel="tag">Tech_About</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thinking/" rel="tag">Thinking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thoughts/" rel="tag">Thoughts</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Application/" style="font-size: 10px;">Application</a> <a href="/tags/Book-Reviews/" style="font-size: 13.33px;">Book_Reviews</a> <a href="/tags/Film-Reviews/" style="font-size: 13.33px;">Film_Reviews</a> <a href="/tags/Ingress/" style="font-size: 10px;">Ingress</a> <a href="/tags/Internship/" style="font-size: 10px;">Internship</a> <a href="/tags/Memory/" style="font-size: 16.67px;">Memory</a> <a href="/tags/Nothing/" style="font-size: 10px;">Nothing</a> <a href="/tags/PaulGraham/" style="font-size: 10px;">PaulGraham</a> <a href="/tags/Tech-About/" style="font-size: 13.33px;">Tech_About</a> <a href="/tags/Thinking/" style="font-size: 13.33px;">Thinking</a> <a href="/tags/Thoughts/" style="font-size: 20px;">Thoughts</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/11/19/Ingress-memory/">Ingress Memory</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/14/Siemens-Engineer-30-interview-summary/">Siemens Engineer 30 Interview Summary</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/14/433-memory/">433 memory</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/07/Internship-Log/">Internship Log</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/30/Fall-of-Gaints-Review/">《巨人的陨落》述评</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 Aaron Laungr<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
