@@ -1,38 +1,1499 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE HTML>
+<html lang="zh-CN">
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="How to Do What You Love, 籬落">
+    <meta name="description" content="It&#39;s Laungr here">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-{% block page_class %}page-post-detail{% endblock %}
+
+    <title>How to Do What You Love | 籬落</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="籬落" type="application/atom+xml">
+</head>
 
 
-{% block content %}
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">籬落</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">籬落</div>
+        <div class="logo-desc">
+            
+            It&#39;s Laungr here
+            
+        </div>
     </div>
-  </div>
 
-{% endblock %}
+    
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">How to Do What You Love</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Thinking/">
+                                <span class="chip bg-color">Thinking</span>
+                            </a>
+                        
+                            <a href="/tags/PaulGraham/">
+                                <span class="chip bg-color">PaulGraham</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2017-06-29
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>最近在看日剧《<a target="_blank" rel="noopener" href="https://movie.douban.com/subject/23997724/">Legal High 2</a>》，第二集最后有这样一段对白：</p>
+<blockquote>
+<p>——画漫画很开心吗？</p>
+</blockquote>
+<blockquote>
+<p>——（害怕之中点头示意）</p>
+</blockquote>
+<blockquote>
+<p>——我的工作也很开心，不想着赚钱，只是热衷工作。人只要有能够热衷的事就很幸福了。</p>
+</blockquote>
+<blockquote>
+<p>——（微笑同意，貌似受到冲击）</p>
+</blockquote>
+<p>看剧的时候看到这一刻，想到手头还在看的这篇文章。是<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer)%E7%9A%84%E6%96%87%E7%AB%A0%EF%BC%8C%E5%9C%A8%E3%80%8A%E5%BE%97%E6%84%8F%E5%BF%98%E5%BD%A2%E3%80%8B%E6%92%AD%E5%AE%A2%E9%87%8C%E9%9D%A2%E5%90%AC%E5%88%B0%E7%9A%84%E3%80%82%E7%9C%8B%E4%BA%86%E4%BB%A5%E5%90%8E%E6%89%93%E7%AE%97%E7%BF%BB%E8%AF%91%E4%B8%80%E4%B8%8B%EF%BC%8C%E5%8E%9F%E6%96%87%E8%BD%BD%E4%BA%8E[%E6%AD%A4%E5%A4%84](http://www.paulgraham.com/love.html">Paul Graham</a>。本人并不是专业译者，只是为了加深自己的理解。</p>
+<hr>
+<blockquote>
+<p> To do something well you have to like it. That idea is not exactly novel. We’ve got it down to four words: “Do what you love.” But it’s not enough just to tell people that. Doing what you love is complicated. </p>
+</blockquote>
+<p>要想做好一件事，你必须先要喜欢它。这种观点本来已是陈词滥调。我们可以把它浓缩为四个字『做你所爱』。但仅仅告诉别人你想要这样做是远远不够的。做你所爱做的事情是很复杂的。</p>
+<blockquote>
+<p>The very idea is foreign to what most of us learn as kids. When I was a kid, it seemed as if  work and fun were opposites by definition. Life had too status: some of the time time adults were making you do things, and that was called work; the rest of time you could do what you wanted, and that was called playing. Occasionally the things adults made you do were fun, just as, occasionally, playing wasn’t —  for example, if you fell and hurt yourself. But except for these few anomalous cases, work pretty much defined as not-fun.</p>
+</blockquote>
+<p>在我们还小学习知识的时候，这种想法完全是新异的。当我还是小孩子的时候，工作和乐趣是完全相反的两种东西。生活有两种状态：当大人叫你去做某些事情，这是工作；剩下的时间你可以做你想做的任何事情，这是玩耍。偶尔情况下，大人叫你去做的事情也可能会是有趣的，而玩耍是开心的，比如说从树上掉下来伤到自己。但仅仅只是<strong>偶尔</strong>。除了这些极端情况，玩耍比工作要开心得多。</p>
+<span id="more"></span> 
+
+<blockquote>
+<p>And it did not seem to be an accident. School, it was implied, was tedious <em>because</em> it was preparation for grownup work.</p>
+</blockquote>
+<p>并且，学校生活的乏味并不是意外。就像它所暗含的意思，他是在为长大工作而做准备。</p>
+<blockquote>
+<p>The world then was divided into two groups, grownups and kids. Grownups, like some kinds of cursed race, had to work. Kids didn’t, but they did have to go to school, which is a dilute version of work meant to prepare us for the real thing. Much as we dislike school, the grownups all agreed that grownup work was worse, and that we had it easy.</p>
+</blockquote>
+<p>这个世界上的人可以分为两组：大人和小孩。大人，他们不得不工作，就好像某种被施加诅咒的种族一样。而孩子们不用，但是他们不得不去上学。上学可以看做是工作的简化版，但同时是在为工作做准备。大多数的孩子都讨厌上学，而大人们认为工作比上学更糟，上学明显要舒服很多。</p>
+<blockquote>
+<p>Teachers in particular all seemed to believe implicitly that work was not fun. Which is not surprising: work wasn’t fun for most of them. Why did we have to memorized state capitals instead of playing dodgeball? For the same reason they had to watch over a bunch of kids instead of lying on a beach. You could’t just do what you wanted.</p>
+</blockquote>
+<p>老师尤其会认为工作及其无趣。这并不意外，因为他们的工作确实极其无聊。我们为什么要记大写字母而不是去玩躲避球，而他们不得不看着一帮熊孩子而不是躺在沙发上，这一切原因都相同。你不可能只做你想做的事情</p>
+<blockquote>
+<p>I’m not saying we should let little kids do whatever they want. They may have to be made to work on certain things. But if we make kids work on dull stuff, it might be wise to tell them that tediousness is not the defining quality of work, and indeed that the reason they have to work on dull stuff now is so they can work on more interesting stuff later.</p>
+</blockquote>
+<p>我不是说我们现在应该让小孩子做他们想做的任何事情。他们必须被强迫做某些特定的事情。但是如果我们在让他们做枯燥的事情，那我们应该说清楚：无趣并不是工作的本质，现在做这些无聊的事情是为了以后可以做一些更有趣的事，做自己想做的事。</p>
+<blockquote>
+<p>Once, when I was about 9 or 10, my father told me I could be whatever I wanted when I grew up, so long as I enjoyed it. I remembered that precisely because it seemed so anomalous. It was like being told to use dry water. Whatever I thought he meant, I didn’t think he meant work could <em>literally</em> be fun—fun like playing. It took me years to grasp it.</p>
+</blockquote>
+<p>在我9岁或者10岁的时候，我的父亲曾告诉我我可以成为我想做的任何职业，只要我喜欢。这句话我记得很准确因为听起来很反常，就好像告诉我去用干的水。无论我的父亲想表达什么，我认为他不是想说工作会很有趣——字面意义上的<strong>有趣</strong>。我花了合唱时间才真正理解这句话。</p>
+<h2 id="Jobs工作"><a href="#Jobs工作" class="headerlink" title="Jobs工作"></a>Jobs工作</h2><blockquote>
+<p>By high school, the prospect of an actual was on the horizon. Adults would sometimes come to speak to us about their work, or we would go to seem them at work. It was always understood that they what they did. In retrospect I think one may have: the private jet pilot. But I don’t think the bank manager really did .</p>
+</blockquote>
+<p>到了高中，实际工作的前景就在眼前。大人有的时候会跟我们讲他们工作的事情，或者我们会看到他们工作的状态。他们很喜欢他们所做的工作的想法深深植根在我们的脑海，回想起来我觉得只有一种人才会真正喜欢他们的工作——私人飞行员。而我无论如何都想不出银行的经历会享受他们的工作。</p>
+<blockquote>
+<p>The main reason they all acted as if they enjoyed their work was presumably the upper-middle class convention that you’re supposed to. It would not merely be bad for your career to say that you despised your job, but a social faux-pas.</p>
+</blockquote>
+<p>他们装的很喜欢自己的工作的原因想必是，中上阶层的管理，这种情况大概你也会有。如果说出你很鄙视自己所做的工作不但会对你的职业生涯有坏处，大概还可能导致尴尬。</p>
+<blockquote>
+<p>Why is it conventional to pretend to like what you do? The first sentence of this essay explains that. If you have to like something to do it well, then the most successful people will all like what they do. That’s where the upper-middle class tradition comes from. Just as houses all over America are full of chairs that are, without the owners even knowing it, nth-degree imitation of chairs designed 250 years ago for French kings, conventional attitudes about work are, without the owners even knowing it. nth-degree imitations of the attitudes of people who’ve done great things.</p>
+</blockquote>
+<p>为何假装你很喜欢自己的工作会成为一种管理呢？这篇文章的第一句话就做了解释。那就是<em>如果你想做好一件事，大多数成功人士是喜欢他们所做的事</em>。这也是中上阶层人的传统的来源。就像全美国的房间里都有很多椅子一样，甚至屋子的主人不知道，这是对于法国王室250年前设计的n度模仿。同上，这种对于工作的态度，就是对于人们想要做好事情的态度的n度模仿，即使他们不知道这些。</p>
+<blockquote>
+<p>What a recipe for alienation. By the time they reach an age to think about what they’d like to do, most kids have been thoroughly misled about the idea of loving one’s work. School has trained them to regard work as an unpleasant duty. Having a job is said to be even more onerous than schoolwork. And yet all the adults claim to like what they do. You can’t blame kids for thinking “I am not like these people, I am not suited to this world.”</p>
+</blockquote>
+<p>这是异化的一种方法。等到他们该考虑未来要做什么的时候，大多数的孩子被热爱工作的想法完全误导。学校已经将他们训练得认为工作是一件很令人不快的任务，而工作要比学校的学习更加繁重，但一些家长却说他们很喜欢自己的工作。那你就不能责怪孩子们产生了这样的想法，<em>我不像那些喜欢工作的人，我一定不适合这个世界</em>。</p>
+<blockquote>
+<p>Actually they’ve been told three lies: the stuff they’ve been taught to regard as work in school is not real work; grownup work is not (necessarily) worse than schoolwork; and many of the adults around them are lying when say they like what they do.</p>
+</blockquote>
+<p>事实上孩子们已经告诉的有三点谎言：第一是他们在学校做的事情并不是工作；第二是大人的工作不逊于学校的工作；第三点是大人们经常撒谎说他们很喜欢自己的工作。</p>
+<blockquote>
+<p>The most dangerous liars can be the kids’ own parents. If you take a boring job to give your family a high standard of living, as many people do, you risk infecting your kids with the idea that working is boring. Maybe it would be better for kids in this one case if parents were not so unselfish. A parent who set an example of loving their might help their kids more than an expensive house.</p>
+</blockquote>
+<p>而对于孩子来说最危险的骗子是自己父母。如果你从事着无聊的工作但可以给你的家庭提供不错生活水准，那么你很有可能会给你的孩子工作很无聊的想法。在这种情况下父母自私一些或许对孩子会更好一些。给孩子做榜样很热爱自己工作的父母大概会比住着豪宅的父母好得多。</p>
+<blockquote>
+<p>It was not till I was in college that the idea of work finally broke free from the idea of making a living. Then the important question became not how to make money, but what to work on. Ideally these coincided, but some particular boundary cases (like Einstein in the patent office) proved they weren’t identical.</p>
+</blockquote>
+<p>我是直到大学才把工作的意义与谋生的意义区分开，重要的问题不是如何赚钱而是如何去工作。理想中两者是吻合的，但在特殊的条件下两者往往是不同的（比如说爱因斯坦在专利局工作）。</p>
+<blockquote>
+<p>The definition of work was now to make some original contribution to the world, and in the process not starve. But after in the habit of so many years my idea if work still include a large component of pain. Work still seemed to require discipline, because only hard problems yielded grand results, and hard problems couldn’t literally be fun. Surely one had to force oneself to work on them.</p>
+</blockquote>
+<p>工作的定义是为世界做出贡献并在此过程中不要饿死自己。但即使多年过后我的观念之中仍有工作很痛苦这样的想法。工作需要纪律，因为只有复杂的问题才有可能产出伟大的结果，而复杂的问题从来都不会听起来很有趣。一个人只有被强迫再回做这样的工作。</p>
+<blockquote>
+<p>If you think something’s supposed to be hurt, you’re less likely to notice if you’re doing it wrong. That about sum up my experience of graduate school.</p>
+</blockquote>
+<p>如果你做某事过程很痛苦，你可能不会去注意自己是否做错了。以上就是我对大学经历的总结。</p>
+<h2 id="Bounds界限"><a href="#Bounds界限" class="headerlink" title="Bounds界限"></a>Bounds界限</h2><blockquote>
+<p><em>How much</em> are you supposed to like what you do? Unless you know that, you don’t know when to stop searching. And if, like most people, you underestimate it, you’ll tend to stop searching too early. You’ll end up doing something chosen for you by your parents, or the desire to make money, or prestige—or sheer inertia.</p>
+</blockquote>
+<p><em>喜欢自己所做的事</em>这一问题应该思考多少？除非你已经思考清楚，不然你不知道如何停止搜寻这个问题。如果像大多数人一样你低估了这个问题，那你会过早地结束这个问题。你可能会去做父母帮你选择好的事情，或者是去想着赚钱，或者是挣取名望，或者只是由于惯性一直在做而已。</p>
+<blockquote>
+<p>Here’s an upper bound: Do what you love doesn’t mean, what you would like to do most <em>this second</em>. Even Einstein probably had moments when he wanted to have to a cup of coffee, but told himself he ought to finish what he was working on first.</p>
+</blockquote>
+<p>这个问题存在上界：做你所爱并不意味着，<em>就在此刻</em>你想做的事情。即使是爱因斯坦大概也有过时刻，想喝杯咖啡但是告诉自己应该先做完手头的事再去。</p>
+<blockquote>
+<p>I used to perplex me when I read about people who liked what they did so much that there was nothing they’d rather do. There didn’t seem to be any sort of work I liked <em>that</em> much. If I had a choice of (a) spending the next hour working on something or (b) be teleported to Rome and spend the next hour wandering about, was there any sort of work I’d prefer? Honestly, no.</p>
+</blockquote>
+<p>我曾经读到有人因为太喜欢自己所做的事情而无法做其他的事情，这令我很困惑。对我来说好像从来没有我<em>如此喜欢</em>的工作。如果给我两个选择（a）工作一个小时；（b）被传输到罗马并在那边漫步一个小时，这两者之间我会更喜欢哪一个呢？老实说，都不喜欢。</p>
+<blockquote>
+<p>But the fact is, almost anyone would rather, at any given moment, float about in the Carribbean, or have sex, or eat some delicious food, than work on hard problems. The rule about doing what you love assumes a certain length of time. It doesn’t mean, do what will make you happiest this second, but what will make you happiest over some longer period, like a week or month. </p>
+</blockquote>
+<p>但事实是，大多数人会更愿意在加勒比海，或是做爱，或是吃好吃的食物，而不是攻克难题。做你所爱的法则实在一定时间长度的基础上的，这并不意味着，你在当下这一刻做让你开心的事，而是在很长一段时间内让你开心的事。</p>
+<blockquote>
+<p>Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something.</p>
+</blockquote>
+<p>乐趣最终会失去，当你厌倦了躺在沙发上时，想要重新获得快乐，你就要去做其他事情。</p>
+<blockquote>
+<p>As a lower bound, you have to like your work more than unproductive pleasure. You have to like what you do enough that the concept of “spare time” seems mistaken. Which is not to say you have to spend all your time working. You can only work so much before you get tired and start screw up. Then you want to do something else—even something mindless. But you don;t regard this time as the prize and the time you spend working as the plain you endure to earn it.</p>
+</blockquote>
+<p>作为下界，你必须要比要比非持续性的乐趣更爱你的工作。你要喜欢你做的事情以致于几乎没有空闲时间，当然这不是说你得把所有的时间都花在工作上。你必须要在感到厌倦炳并会砸这件事情之前停下来，然后去做其他事情忙或许是没有意义的。你不必把这段时间看做是奖赏，也不要把工作时间看做你不得不忍受的痛苦。</p>
+<blockquote>
+<p>I put the lower bound there for practical reasons. If your work is not your favorite thing to do, you’ll have terrible problems with procrastination. You’ll have to force yourself to work, and when you resort to that the result are distinctly inferior.</p>
+</blockquote>
+<p>我以这个作为下界是有实际原因的。如果你的工作不是你想做的事情，那么就会产生拖延的大问题。你将不得不强迫自己去工作，那么这个结果一般会很差。</p>
+<blockquote>
+<p>To be happy I think you have to be doing something you not only enjoy, but admire. You have to be able to say, at the end, that’s pretty cool. This doesn’t mean you have to make something. If you learn how to hang glide, or to speak a foreign language fluently, that will be enough to make you say, for a while at least, wow, that’s pretty cool. What there to be is a test.</p>
+</blockquote>
+<p>为了快乐你也许需要做一些不是很享受但是很欣赏的事情，那种你会在最后说<em>哇这很棒</em>的那种事。这不是说你必须要达到某种成果。如果你学习如何操纵滑翔机或者流利地说一门外语，在最后你很有可能会说出<em>哇这很棒</em>这样的话。而你达到的程度可以通过考试的方式来检验。</p>
+<blockquote>
+<p>So one thing that falls just short of the standard, I think, is reading books. Except for some books in math and the sciences, there’s no test of how well you’ve read a book, and that’s why merely reading books doesn’t quite feel like work. You have to do something with what you’ve read to feel productive.</p>
+</blockquote>
+<p>所以如果有不符合以上标准的事，在我看来只有一件那就是看书。除非一些数理学科的书籍，无法考核你阅读书籍的成果，这也就是读书看起来不像是工作的原因。要想读书感到有生产性的话你还需要做其他的事情。</p>
+<blockquote>
+<p>I think the best is one Gino Lee taught: try to do things that would make your friends say wow. But it probably wouldn’t start to work properly till about age 22, because most people haven’t had a big enough sample to pick friends from before then.</p>
+</blockquote>
+<p>我认为最好的检测是Gino Lee教给我的：<em>做能够让你的朋友称赞的事情</em>。但这大概直到你22岁之后才会起作用，因为在这之前大多数人都没有足够大的圈子来挑选自己真正的<strong>朋友</strong>。</p>
+<h2 id="Sirens警告"><a href="#Sirens警告" class="headerlink" title="Sirens警告"></a>Sirens警告</h2><blockquote>
+<p>What  you should not do, I think, is worry about the opinion of anyone beyond your friends. You shouldn’t worry about prestige. Prestige is the opinion of the rest of the world. When you can ask the opinion of people whose judgement you respect, what does it add to consider the opinion of people you don’t even know?</p>
+</blockquote>
+<p>我认为你不该做的事是，考虑除了你朋友之外的其他人看法。你根本不用担心声望，声望是除朋友之外的世界看待你的目光。当你可以询问你很敬佩的人的意见时，考虑你不认识的人的看法有人么意义呢？</p>
+<blockquote>
+<p>This is easy advice to give. It’s hard to follow, especially when you’re young. Prestige is like a powerful magnet that warps even your beliefs about about what you enjoy. It causes you work not on what you like, but what you’d like to like.</p>
+</blockquote>
+<p>建议很容易给出，但是却很建遵守，尤其是当你还年轻的时候。威望就像一个强大的磁铁，甚至会扭曲你的信仰，这就会导致你去做不是自己喜欢的事，而是你想让自己喜欢的事。</p>
+<blockquote>
+<p>That’s what leads people to try write novels, for example. They like reading novels. They notice that people who write them win Nobel Prizes. What could be more wonderful, They think, than to be a novelist? But liking the idea of being a novelist is  not enough; you have to like the actual work of novel-writing if you’re going to be good at it; you have to like making up elaborate lies.</p>
+</blockquote>
+<p>举例来说，这也是为何人们回去写小说的原因，他们喜欢读小说，他们注意到写小说的人可以获得诺贝尔奖，那还有比成为一个小说家更美妙的事情吗？但仅仅有成为小说家的想法是不够的，你还必须擅长写小说，你很必须喜欢去编排出那些缜密的故事。</p>
+<blockquote>
+<p>Prestige is just fossilized. If you do anything well enough, you’ll <em>make</em> it prestigious Plenty of things we now consider prestigious were anything but at first. Jazz comes to mind—though almost any established art form would do. So just do what you like, and let prestige take care of itself.</p>
+</blockquote>
+<p>威望只是如化石一般的鼓舞。如果你把一件事做得足够好，你就要把它包装的很有名望。我们如今看到的很多事情都很有名望，但他们最初并不是如此。Jazz就是这样的，尽管大多数的音乐风格都是如此。所以你只是去做你想换做的事情，然后来让声望保护它。</p>
+<blockquote>
+<p>Prestige is especially dangerous to the ambitious. If you want to make ambitious people waste their time on errands, the way to do it is to bait the hook with prestige. That’s the recipe for getting people to give talks, write forewords, serve on committees, be department heads, and so on. It might be a good rule simply to avoid any prestigious task. If it didn’t suck, they wouldn’t have to make it prestigious.</p>
+</blockquote>
+<p>威望对于野心是狠危险的。如果你想让有雄心壮志的人来跑腿来浪费他们的时间，那最好的方法就是用威望来诱惑他们，这是让这类人进行谈判、撰写前言、在委员会任职、担任部门主管等的方法。避免让他们做有威信的任务是一条最简单的原则。如果他们不吃这套，那就本不应该让他们有威信。</p>
+<blockquote>
+<p>Similarly, if you admire two kinds of work equally, but one is more prestigious, you should probably choose the other. Your opinion about what’s admirable are always going to be slightly influenced by prestige, so if the two seem equal to you, you probably have more genuine admiration for the less prestigious one.</p>
+</blockquote>
+<p>类似的，如果你同时很欣赏两份工作，那应该选择威望较低的那一份。你对于工作的判断经常会收声望的影响，所以两份看起来一样的工作，声望较低的那份可能是你更欣赏的一份。</p>
+<blockquote>
+<p>The other big force leading people astray is money. Money by itself is not that dangerous. When something pays well but is regarded with contempt, like telemarketing, or prostitution, or personal injury litigation, ambitious people aren’t tempted by it. That kind of work ends up being done by people who are “just trying to make a living.” (Tip: avoid any field whose practitioners say this.) The danger is when money is combined with prestige, as in, say, corporate law, or medicine. A comparatively safe and prosperous career with some automatic baseline prestige is dangerously tempting to someone young, who hasn’t thought much about what they really like.</p>
+</blockquote>
+<p>另外一个引导人们走错的因素是<strong>钱</strong>，但钱本身来说不是危险因素。当某事情收益很好但很被鄙视，比如说电话营销、卖淫、个人伤害诉讼，抱负不凡的人不会为之动心。这种工作最终是由<em>只是想以此谋生</em>的人所做的。危险在于金钱与声望相结合，如公司法或药品。有自动的威望基准线并且相对安全和繁荣的的职业对于一些年轻人来说十分危险，，这些年轻人还没想好他们真正喜欢的是什么。</p>
+<blockquote>
+<p>The test of whether people love what they do whether they’d do it even if they weren’t paid for it—even if they had to work at another job to make a living. How many corporate lawyers would do their current work if they had to do it for free, in their space time, and take day jobs as waiters to support themselves?</p>
+</blockquote>
+<p>对是否真正喜欢他的职业的最好测评是看他再不给报酬的情况下是否还愿意做，即便他们不得不做另一份其他工作来谋生也要做这件事，那么他就是真的喜欢。有多少公司律师还愿意做他们的工作如果不被付给薪酬？</p>
+<blockquote>
+<p>This test is especially helpful in deciding between different kinds of academic work, because fields vary greatly in this respect. Most good mathematicians would work on math even if there were no jobs as math professors, whereas in the departments at the other end of the spectrum, the availability of teaching jobs is the driver: people would rather be English professors than work in ad agencies, and publishing papers is the way you compete for such jobs. Math would happen without math departments, but it is the existence of English majors, and therefore jobs teaching them, that calls into being all those thousands of dreary papers about gender and identity in the novels of Conrad. No one does that kind of thing for fun.</p>
+</blockquote>
+<p><del>这种测试对于决定两种不同的学术工作更有帮助，因为在这方面的领域差别巨大。即使数学教授没有工作多数优秀的数学家仍会选择研究数学，但是在另外一端，教学可用性是司机比起在广告机构发行传单，人们更喜欢做一名英语教师。没有数学系，数学照样是存在的，但是是有了英语专业之后，才有了英语教学，这在在康拉德小说中被称为成千上万关于性别和身份的凄凉的文章。没有人会这样做的乐趣。</del></p>
+<blockquote>
+<p>The advice of parents will tend to err on the side of money. It seems safe to say there are more undergrads who want to be novelists and whose parents want then to be doctors than who want to be doctors and whose parents want them to be novelists. The kids think their parents are “materialistic.” Not necessarily. All parents tend to be more conservative for their kids than they would for themselves, simply because, as parents, they share risks more than rewards. If your eight years old son decides to climb a tall tree, or your teenage daughter decides to date the local boy, you won’t get a share in the excitement, but if your son falls, or your daughter gets pregnant, you’ll have to seal with the consequences.</p>
+</blockquote>
+<p>父母的意见往往会偏向于钱。本科毕业生想成为小说家，而他们的父母则想让他们成为医生，这看起来要比两者反过来更加稳妥，这些孩子同上会认为他们的父母很<em>唯物主义</em>。父母通常要比子女更加保守仅仅因为他们比起后者冒的限更大，而得到的却很少，比如说你8岁的儿子决定去爬一棵很高的书，你的女儿想要和一个男孩约会，你根本不会觉得有什么值得兴奋地的地方，但如果儿子从树上摔下来了或者女儿意外怀孕了，那你将不得不面对这些结果。</p>
+<h2 id="Discipline纪律"><a href="#Discipline纪律" class="headerlink" title="Discipline纪律"></a>Discipline纪律</h2><blockquote>
+<p>With such powerful forces leading us astray, it’s not surprising we find it so hard to discover what we like to work on. Most people are doomed in childhood by accepting the axiom that work = pain. Those who escape this are nearly all lured onto the rocks by prestige or money. How many even discover something they love to work on? A few hundred thousand, perhaps, out of billions.</p>
+</blockquote>
+<p>我们在如此强的外界影响之下走错，那么我们很难发现自己究竟喜欢的是什么也不奇怪。大多数人被小时后接受的<code>工作是痛苦的</code>所影响终生，即使不受影响的大多也是被名望和金钱所诱惑。真正发掘出自己喜欢的事情的人有多少呢？估计不多于一百万。</p>
+<blockquote>
+<p>It’s hard to find work you love; it must be, if so few do. So don’t underestimate this task. And don’t fee; bad if you haven’t succeeded yet. In fact, if you admit to yourself that you’re discontented, you’re a step ahead of people. who are still in denial. If you’re surrounded by colleagues who claim to enjoy work that you find contemptible, odds are they’re lying to themselves. Not necessarily, but probably.</p>
+</blockquote>
+<p>很难找出你真正所爱的工作，也只有极少数人才做得到，所以你与低估这一项任务。如果你至今还没有成功找到，也请你不要悲伤。事实上如果你因为承认没有找到而对自己不满，那你已经在很多人之前了，而他们仍然在拒绝。如果你的身边的同事都宣称很喜欢你认为不满的工作，那么他们很可能在自欺欺人。不确定， 但有可能。</p>
+<blockquote>
+<p>Although doing great work takes less discipline than people think—because the way to do great work is to find something you like so much that you don’t have to force yourself to do it—<em>finding</em> work you love does usually require discipline. Some people are lucky enough to know what they want to do when they’re 12, and just glide along as if they were on railroad tracks. But this seems the exception. More often people who do great things have careers with the trajectory of a ping-pong ball. They go to school to study A, drop out and get a job doing B, and then become famous for C after taking it up on the side.</p>
+</blockquote>
+<p>你去从事一项伟大的工作的索要服从的戒律要比人们想象的少得多，从事伟大的工作必须是你自己喜欢的工作，那你就不会去强迫自己，要遵从的条款也就越少。有的人在他们12岁的时候就知道了自己喜欢做什么，他们是何其幸运，之后他们只需要像在铁轨上滑翔一样就可以，这样的人只是例外。大多数人在最终职业的选择上要走很多弯路，先选择A，放弃之后再选B，最终以C为成就。</p>
+<blockquote>
+<p>Sometimes jumping from one sort of work to another is a sign of energy, and sometimes it’s a sign of laziness. Are you dropping out, or boldly carving a new path? You often can’t tell yourself. Plenty of people who will later do great things seem to be disappointments early on, when they’re trying to find their niche.</p>
+</blockquote>
+<p>工作中的跳槽有的时候是一种进步，而有的时候也会是懒惰的标志。你到底是放弃了还是在开辟一条新的路，你也无法确定地告诉自己。很多人在后来会做之前的自己很失望的事情，尤其是当他们想追求安定的时候。</p>
+<blockquote>
+<p>Is there some test you can use to keep yourself honest? One is to try to do a good job at whatever you’re doing, even if you don’t like it. Then at least you’ll know you’re not using dissatisfaction as an excuse for being lazy. Perhaps more importantly, you’ll get into the habit of doing things well.</p>
+</blockquote>
+<p>可以测试你自己是不是对自己保持诚实呢？一种方法是去做你当下在做的任意，工作无论你喜不喜欢。这样至少你可以知道你不是在以不满意作为懒惰的借口，更重于得失，你可以养成做好每一件事的习惯。</p>
+<blockquote>
+<p>Another test you can use is: always produce. For example, if you have a day job you don’t take seriously because you plan to be a novelist, are you producing? Are you writing pages of fiction, however bad? As long as you’re producing, you’ll know you’re not merely using the hazy vision of the grand novel you plan to write one day as an opiate. The view of it will be obstructed by the all too palpably flawed one you’re actually writing.</p>
+</blockquote>
+<p>另外一个测试是：永远保持生产。举例来说：你想成为一个小说家所以你没有认真对待自己白天所做的工作，那这样的情况下你在产出吗？你正在写自己的小说，但是却写得很糟？只要你在产出，你就会知道你不仅仅是在用一种有朝一日会写出宏大故事的朦胧视角当做鸦片一样的东西，这种观点将会被你正在写的东西所阻碍。</p>
+<blockquote>
+<p>“Always produce” is also a heuristic for finding the work you love. If you subject yourself to that constraint, it will automatically push you away from things you think you’re supposed to work on, toward things you actually like. “Always produce” will discover your life’s work the way water, with the aid of gravity, finds the hole in your roof.</p>
+</blockquote>
+<p>『永远产出』也是对你找到喜欢的工作的一种启发，如果你受限与这个限制，它将会自动把你从你所认为你应该的工作推到你真正喜欢的东西上。『永远产出』会发现你的生活与你喜欢的工作，就像水会会通过重力找到房顶的洞。</p>
+<blockquote>
+<p>Of course, figuring out what you like to work on doesn’t mean you get to work on it. That’s a separate question. And if you’re ambitious you have to keep them separate: you have to make a conscious effort to keep your ideas about what you want from being contaminated by what seems possible. </p>
+</blockquote>
+<p>当然，弄清楚你喜欢的工作不意味着你就要去做它，这是两个分开的问题。并且如果你有雄心，你必须把这两个问题分开。你要下意识地去努力保持你想要做什么的想法，而不要被看起来的可能性所影响。</p>
+<blockquote>
+<p>It’s painful to keep them apart, because it’s painful to observe the gap between them. So most people pre-emptively lower their expectations. For example, if you asked random people on the street if they’d like to be able to draw like Leonardo, you’d find most would say something like “Oh, I can’t draw.” This is more a statement of intention than fact; it means, I’m not going to try. Because the fact is, if you took a random person off the street and somehow got them to work as hard as they possibly could at drawing for the next twenty years, they’d get surprisingly far. But it would require a great moral effort; it would mean staring failure in the eye every day for years. And so to protect themselves people say “I can’t.”</p>
+</blockquote>
+<p>把两者分开是很痛苦的，因为观察两者之间的差距很痛苦。所以很多人会首先降低他们的期望。比方说：如果你在大街上随便找人问他是否想要想莱昂纳多那样画画，大多数人的回答是这样：<em>噢，我不行</em>，这是对意向想法的陈述而不是对事实的陈述，他们相当于在说：<em>我不愿意去尝试</em>。因为事实是：<em>如果你在大街上随便找人并让他们在接下来的20年终刻苦练习绘画，他们将感到很诧异。</em>但这需要很大的道义上的努力;这将意味着每天都凝视失败连续多年，所以人们为了保护自己都会说<em>我不行</em>。</p>
+<blockquote>
+<p>Another related line you often hear is that not everyone can do work they love—that someone has to do the unpleasant jobs. Really? How do you make them? In the US the only mechanism for forcing people to do unpleasant jobs is the draft, and that hasn’t been invoked for over 30 years. All we can do is encourage people to do unpleasant work, with money and prestige.</p>
+</blockquote>
+<p>经常听到的另外一点是不是所有人都可以做他们爱做的工作，有人必须去做不令人开心的工作。真的吗？如何得出这一点？在美国体制内强迫人们去做自己不愿做的事情是服兵役，这一条也已经被呼吁了30年以上。我们能做到的事用名望或者金钱去诱惑人们做不开心的事。</p>
+<blockquote>
+<p>If there’s something people still won’t do, it seems as if society just has to make do without. That’s what happened with domestic servants. For millennia that was the canonical example of a job “someone had to do.” And yet in the mid twentieth century servants practically disappeared in rich countries, and the rich have just had to do without.</p>
+</blockquote>
+<p><del>如果还有人们不愿意做的事，那就是社会让他们做家务，这事发生在家庭用人上。大约在千禧年，有一种工作的点范是<em>某人要做</em>。二十世纪中期，发达国家的佣人不做了，导致富人也不得不做家务。</del> </p>
+<blockquote>
+<p>So while there may be some things someone has to do, there’s a good chance anyone saying that about any particular job is mistaken. Most unpleasant jobs would either get automated or go undone if no one were willing to do them.</p>
+</blockquote>
+<p>所以虽然有人不得不去做一些事情，但任何人都有可能说任何特定工作都是错误的。如果没有人愿意做这些工作，大多数令人不快的工作都会自动化或撤销。</p>
+<h2 id="Two-Routes两条路"><a href="#Two-Routes两条路" class="headerlink" title="Two Routes两条路"></a>Two Routes两条路</h2><blockquote>
+<p> There’s another sense of “not everyone can do work they love” that’s all too true, however. One has to make a living, and it’s hard to get paid for doing work you love. There are two routes to that destination:</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p> The organic route: as you become more eminent, gradually to increase the parts of your job that you like at the expense of those you don’t.</p>
+</blockquote>
+<blockquote>
+<p>The two-job route: to work at things you don’t like to get money to work on things you do.</p>
+</blockquote>
+</blockquote>
+<p>另外一种想法<em>不是所有人都能做他想做的工作</em>的却是事实，但是任何都都要做一件谋生的事情，做你爱做的事情一般不会得到很高的报酬。下面是两条路：</p>
+<blockquote>
+<p>有机路线：当你变得优秀时，逐渐增加你喜欢的工作，牺牲那些你不喜欢的部分。</p>
+</blockquote>
+<blockquote>
+<p>两个工作路线：为了做喜欢的工作，在不喜欢的工作上赚足够多的钱。</p>
+</blockquote>
+<blockquote>
+<p> The organic route is more common. It happens naturally to anyone who does good work. A young architect has to take whatever work he can get, but if he does well he’ll gradually be in a position to pick and choose among projects. The disadvantage of this route is that it’s slow and uncertain. Even tenure is not real freedom.</p>
+</blockquote>
+<p>有机路线是更常见的。任何人都想做很好的工作这是自然的。一个年轻的建筑师不得不去做他能接到任何活，但如果他做得优秀他渐渐的就可以做挑选他想做的工作。这条路线的劣势是发展很慢并且不确定。即使终身职位也不是真正的自由。</p>
+<blockquote>
+<p>The two-job route has several variants depending on how long you work for money at a time. At one extreme is the “day job,” where you work regular hours at one job to make money, and work on what you love in your spare time. At the other extreme you work at something till you make enough not to have to work for money again.</p>
+</blockquote>
+<p>从事两个工作的路线有很大的变数，取决于你想赚多少钱。极端来说就是钟点工，在这个职位上你可以在上班时间来赚钱，在其他空闲时间来做你喜欢做的事情。另一种极端是你做那个赚钱的工作直至赚够钱。</p>
+<blockquote>
+<p>The two-job route is less common than the organic route, because it requires a deliberate choice. It’s also more dangerous. Life tends to get more expensive as you get older, so it’s easy to get sucked into working longer than you expected at the money job. Worse still, anything you work on changes you. If you work too long on tedious stuff, it will rot your brain. And the best paying jobs are most dangerous, because they require your full attention.</p>
+</blockquote>
+<p>有机路线明显要比两个工作路线更加常见，因为后者需要慎重的选择，并且更危险。当你越老，生活的成本就越来越高，所以就会陷入需要在赚钱的岗位上工作更长时间的僵局，更糟的是，你从事的工作会渐渐改变你。在无聊的岗位上的工作会渐渐锈蚀你的大脑。薪酬越高的工作越危险，那需要你全部的注意力。</p>
+<blockquote>
+<p>The advantage of the two-job route is that it lets you jump over obstacles. The landscape of possible jobs isn’t flat; there are walls of varying heights between different kinds of work. </p>
+</blockquote>
+<p>两个工作路线的优势在于它可以让你越过障碍，工作的道路一定不是平坦的，各种工作之中都有不同的障碍阻拦着你。</p>
+<blockquote>
+<p>The trick of maximizing the parts of your job that you like can get you from architecture to product design, but not, probably, to music. If you make money doing one thing and then work on another, you have more freedom of choice.</p>
+</blockquote>
+<p>最大限度地发挥您的工作部分的诀窍可以让您从理念架构到产品设计，但大概对音乐来说不适合这样。 如果你赚钱做一件事，然后做另一件工作，你有更多的自由选择。</p>
+<blockquote>
+<p>Which route should you take? That depends on how sure you are of what you want to do, how good you are at taking orders, how much risk you can stand, and the odds that anyone will pay (in your lifetime) for what you want to do. If you’re sure of the general area you want to work in and it’s something people are likely to pay you for, then you should probably take the organic route. But if you don’t know what you want to work on, or don’t like to take orders, you may want to take the two-job route, if you can stand the risk.</p>
+</blockquote>
+<p>你该选哪条路呢？取决于你对你想做的事情的确信程度、你有多擅长按重要排序、能承担多大的风险、别人为你买单的可能性。如果你确信你想要工作的领域内有人愿意为你买单，那你该采取有机路线；但是如果你不清楚自己想做什么，或者不想接受命令，那你该选第二条路，如果你能承担风险的话。</p>
+<blockquote>
+<p>Don’t decide too soon. Kids who know early what they want to do seem impressive, as if they got the answer to some math question before the other kids. They have an answer, certainly, but odds are it’s wrong.</p>
+</blockquote>
+<p>不要太早地下定论。很早就知道想做什么的小孩总是很引人注目，就像他们能够比别人更快的解出数学题一样，他们确实有答案，但有可能是错误的答案。</p>
+<blockquote>
+<p>A friend of mine who is a quite successful doctor complains constantly about her job. When people applying to medical school ask her for advice, she wants to shake them and yell “Don’t do it!” (But she never does.) How did she get into this fix? In high school she already wanted to be a doctor. And she is so ambitious and determined that she overcame every obstacle along the way—including, unfortunately, not liking it.</p>
+</blockquote>
+<p>我的一个很成功的医生朋友老是想我抱怨她的工作。当有人想上医学大学时来咨询她的意见，她很想告诉他们<em>不要这样做</em>，但她从来没有这样做过。她是怎么陷入这个困境的呢？她在高中的时候就想做一名医生，她很厉害并且后来克服了各种困难，甚至包括了<em>不喜欢做一名医生的困难</em>。</p>
+<blockquote>
+<p>Now she has a life chosen for her by a high-school kid.</p>
+</blockquote>
+<p>如今，她的生活，一个被高中的孩子选择的人生。</p>
+<blockquote>
+<p>When you’re young, you’re given the impression that you’ll get enough information to make each choice before you need to make it. But this is certainly not so with work. When you’re deciding what to do, you have to operate on ridiculously incomplete information. Even in college you get little idea what various types of work are like. At best you may have a couple internships, but not all jobs offer internships, and those that do don’t teach you much more about the work than being a batboy teaches you about playing baseball.</p>
+</blockquote>
+<p>当你年轻的时候，你被贯以这样的印象，<em>在做决定之前都要获取到足够多的信息</em>，但对于工不是这样。当你决定要做什么的时候，你不得不在极少的信息之上进行工作。在上大学的时候，你对于喜欢的工作类型一无所知，至多你会有几次实习经历，但不是所有的工作都会提供实习，并且这些实习经历只能教给你很少很少的东西。</p>
+<blockquote>
+<p>In the design of lives, as in the design of most other things, you get better results if you use flexible media. So unless you’re fairly sure what you want to do, your best bet may be to choose a type of work that could turn into either an organic or two-job career. That was probably part of the reason I chose computers. You can be a professor, or make a lot of money, or morph it into any number of other kinds of work.</p>
+</blockquote>
+<p>在生活的设计之中，正如在大多数其他事物的设计中，如果使用灵活的媒体，则可以获得更好的结果。所以除非你很确定地知道你想做的事情，选一种可以变成有机路线或者两个工作路线之一是一种不错的想法。这是我选择计算机这一行业的部分原因，你可以做一名教授，可以去赚钱，也可以变身成为其他工作。</p>
+<blockquote>
+<p>It’s also wise, early on, to seek jobs that let you do many different things, so you can learn faster what various kinds of work are like. Conversely, the extreme version of the two-job route is dangerous because it teaches you so little about what you like. If you work hard at being a bond trader for ten years, thinking that you’ll quit and write novels when you have enough money, what happens when you quit and then discover that you don’t actually like writing novels?</p>
+</blockquote>
+<p>能够让你做多种不同事情的工作也是不错的，这样你就可以了解到各种不同的工作是什么样子。相反的，两个工作路线的极端情况是很危险的，因为能教给你关于你到底喜欢什么的东西很少。如果你做了证券交易员10年，想着你赚了足够多的钱然后想去写小说，当你真正辞去工作却发现自己并不喜欢写小说将是一种怎样的情况。？</p>
+<blockquote>
+<p>Most people would say, I’d take that problem. Give me a million dollars and I’ll figure out what to do. But it’s harder than it looks. Constraints give your life shape. Remove them and most people have no idea what to do: look at what happens to those who win lotteries or inherit money. Much as everyone thinks they want financial security, the happiest people are not those who have it, but those who like what they do. So a plan that promises freedom at the expense of knowing what to do with it may not be as good as it seems.</p>
+</blockquote>
+<p>大多数人会说，我可以处理这问题。给我一百万我会弄清楚去做什么。但这比看起来要难得多。约束会给你的生活定型。去掉这些约束之后很多人会不知所措，你看那些中了彩票或者继承了大笔财产的人。尽管每个人都认为他们需要经济保障，但最幸福的人并不是那些拥有财务自由的人，而是那些喜欢做什么的人。因此，一个以牺牲自己的利益为代价而承诺自由的计划可能并没有看上去那么好。</p>
+<blockquote>
+<p>Whichever route you take, expect a struggle. Finding work you love is very difficult. Most people fail. Even if you succeed, it’s rare to be free to work on what you want till your thirties or forties. But if you have the destination in sight you’ll be more likely to arrive at it. If you know you can love work, you’re in the home stretch, and if you know what work you love, you’re practically there.</p>
+</blockquote>
+<p>无论你选择了哪条路线，你的预期必须是奋斗的一条路。找到你所爱是很难的事，大多数人都会失败。即使你成功找到，大多数人直到三四十岁才能选择好喜欢的工作。但是如果你看到了目标，你就更有可能到达目标。如果你知道你可以热爱工作，你就去冲刺重点，如果你知道你喜欢什么工作，你就在那里。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Aaron Laungr</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://laungr.github.io/2017/06/29/How-to-Do-What-You-Love/">https://laungr.github.io/2017/06/29/How-to-Do-What-You-Love/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Aaron Laungr</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Thinking/">
+                                    <span class="chip bg-color">Thinking</span>
+                                </a>
+                            
+                                <a href="/tags/PaulGraham/">
+                                    <span class="chip bg-color">PaulGraham</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2017/07/06/Brave-New-World-Review/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Brave New World">
+                        
+                        <span class="card-title">Brave New World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2017-07-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Aaron Laungr
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Book-Reviews/">
+                        <span class="chip bg-color">Book_Reviews</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2017/06/23/Junior-Year-Has-Gone/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="大三已去">
+                        
+                        <span class="card-title">大三已去</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-06-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Aaron Laungr
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Aaron Laungr</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
